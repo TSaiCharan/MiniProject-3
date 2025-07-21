@@ -1,0 +1,22 @@
+.review-card {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.review-text {
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.review-rating {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.review-user {
+  color: #555;
+  font-size: 0.9em;
+}

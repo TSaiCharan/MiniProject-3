@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin("http://localhost:5173/")
 public class CourseController {
 
     @Autowired
@@ -20,8 +20,10 @@ public class CourseController {
 
     @GetMapping("courses")
     public List<CourseResponseDTO> getAllCourses(){
-        List<Course> courses = courseService.getAllCourses();
-        return courses.stream().map(this::convertToCourseResponseDTO).collect(Collectors.toList());
+//        List<Course> courses = courseService.getAllCourses();
+        List<CourseResponseDTO> allCourses = courseService.getAllCourses();
+        return allCourses;
+//                courses.stream().map(this::convertToCourseResponseDTO).collect(Collectors.toList());
     }
     
     @GetMapping("courses/{id}")

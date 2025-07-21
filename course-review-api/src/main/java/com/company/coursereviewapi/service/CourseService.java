@@ -1,5 +1,6 @@
 package com.company.coursereviewapi.service;
 
+import com.company.coursereviewapi.dto.CourseResponseDTO;
 import com.company.coursereviewapi.model.Course;
 import com.company.coursereviewapi.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,9 @@ public class CourseService {
     @Autowired
     CourseRepository courseRepository;
 
-    public List<Course> getAllCourses() {
-        return (List<Course>) courseRepository.findAll();
+    public List<CourseResponseDTO> getAllCourses() {
+//        return (List<Course>) courseRepository.findAllWithRating();
+        return courseRepository.findAllWithRating();
     }
 
     public Course getCourseById(long id) {

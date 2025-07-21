@@ -11,4 +11,15 @@ public class CourseResponseDTO {
     private String description;
     private String instructor;
     private Double averageRating;
+
+    public CourseResponseDTO(){}
+
+    public CourseResponseDTO(Long id, String title, String description, String instructor, Double averageRating) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.instructor = instructor;
+        this.averageRating = averageRating;
+    }
+
 }

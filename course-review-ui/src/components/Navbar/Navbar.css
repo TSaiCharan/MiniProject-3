@@ -1,0 +1,14 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.center{
+    font-size: 30px;
+}
+
+.right{
+    padding-right: 50px;
+    font-size: 20px;
+}
